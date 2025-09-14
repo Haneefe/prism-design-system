@@ -25,6 +25,6 @@
       "@prism/components": ["./packages/components/src"]
     }
   },
-  "include": ["packages/*/src/**/*", "examples/*/src/**/*", ".storybook/**/*", "jest.d.ts"],
+  "include": ["packages/*/src/**/*", "examples/*/src/**/*", ".storybook/**/*", "jest.d.ts", "types/**/*"],
   "exclude": ["node_modules", "dist", "build"]
 }

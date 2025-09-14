@@ -17,7 +17,6 @@
   "references": [
     { "path": "./packages/tokens" },
     { "path": "./packages/core" },
-    { "path": "./packages/components" },
-    { "path": "./examples/dashboard" }
+    { "path": "./packages/components" }
   ]
 }
