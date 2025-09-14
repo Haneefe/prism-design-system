@@ -35,8 +35,6 @@ A production-ready, accessible React design system with comprehensive theming, a
 ```bash
 npm install @prism/components @prism/tokens
 # or
-pnpm add @prism/components @prism/tokens
-# or
 yarn add @prism/components @prism/tokens
 ```
 
@@ -116,7 +114,7 @@ All components support systematic variants for consistent design:
 ### Prerequisites
 
 - Node.js 18+
-- pnpm 8+
+- npm 9+ (or yarn)
 
 ### Getting Started
 
@@ -126,30 +124,30 @@ git clone https://github.com/your-org/prism-design-system.git
 cd prism-design-system
 
 # Install dependencies
-pnpm install
+npm install
 
 # Generate design tokens
-pnpm generate:tokens
+npm run generate:tokens
 
 # Start development
-pnpm dev
+npm run dev
 
 # Run tests
-pnpm test
+npm test
 
 # Build packages
-pnpm build
+npm run build
 ```
 
 ### Available Scripts
 
-- `pnpm dev` - Start Storybook development server
-- `pnpm build` - Build all packages
-- `pnpm test` - Run test suite with coverage
-- `pnpm lint` - Run ESLint
-- `pnpm typecheck` - Type check all packages
-- `pnpm generate:tokens` - Generate CSS from design tokens
-- `pnpm changeset` - Create a changeset for release
+- `npm run dev` - Start Storybook development server
+- `npm run build` - Build all packages
+- `npm test` - Run test suite with coverage
+- `npm run lint` - Run ESLint
+- `npm run typecheck` - Type check all packages
+- `npm run generate:tokens` - Generate CSS from design tokens
+- `npm run changeset` - Create a changeset for release
 
 ### Monorepo Structure
 
@@ -172,7 +170,7 @@ prism-design-system/
 Interactive component documentation is available at:
 
 - **Production**: [https://prism-design-system.vercel.app](https://prism-design-system.vercel.app)
-- **Local**: Run `pnpm dev` and visit `http://localhost:6006`
+- **Local**: Run `npm run dev` and visit `http://localhost:6006`
 
 ### Examples
 
@@ -187,8 +185,8 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 1. **Fork & Clone**: Fork the repository and clone your fork
 2. **Branch**: Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. **Develop**: Make your changes with tests and documentation
-4. **Test**: Run `pnpm test` and `pnpm lint`
-5. **Changeset**: Run `pnpm changeset` to document your changes
+4. **Test**: Run `npm test` and `npm run lint`
+5. **Changeset**: Run `npm run changeset` to document your changes
 6. **Pull Request**: Open a PR with a clear description
 
 ### Commit Convention
@@ -218,7 +216,7 @@ docs(storybook): update Button examples
 - **Framer Motion**: Declarative animations with reduced bundle impact
 - **Jest + RTL**: Comprehensive testing including accessibility validation
 - **Storybook**: Component documentation and visual testing
-- **pnpm**: Fast, efficient monorepo package management
+- **npm workspaces**: Efficient monorepo package management
 
 ## 📈 Roadmap
 
