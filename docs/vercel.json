@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "name": "prism-design-system",
+  "builds": [
+    {
+      "src": "storybook/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "storybook-static"
+      }
+    },
+    {
+      "src": "dashboard/package.json", 
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/docs(/.*)?",
+      "dest": "/storybook$1"
+    },
+    {
+      "src": "/dashboard(/.*)?", 
+      "dest": "/dashboard$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/storybook/$1"
+    }
+  ],
+  "regions": ["iad1"],
+  "functions": {
+    "storybook/**": {
+      "includeFiles": "storybook/**"
+    },
+    "dashboard/**": {
+      "includeFiles": "dashboard/**"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options", 
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/storybook/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

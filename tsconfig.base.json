@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["DOM", "DOM.Iterable", "ES6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@prism/tokens": ["./packages/tokens/src"],
+      "@prism/core": ["./packages/core/src"],
+      "@prism/components": ["./packages/components/src"]
+    }
+  },
+  "include": ["packages/*/src/**/*", "examples/*/src/**/*", ".storybook/**/*", "jest.d.ts"],
+  "exclude": ["node_modules", "dist", "build"]
+}

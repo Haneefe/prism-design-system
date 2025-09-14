@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "types": ["node"],
+    "lib": ["ES2017", "DOM"]
+  },
+  "include": ["src/**/*", "scripts/**/*"],
+  "exclude": ["dist", "node_modules"]
+}
